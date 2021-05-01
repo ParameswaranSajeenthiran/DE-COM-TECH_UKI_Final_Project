@@ -95,7 +95,7 @@ function Video() {
 
 	return (
 		<div className="video-body">
-			<h1 style={{ textAlign: "center", color: '#fff' }}>DE-COM-TECh</h1>
+			<h1 style={{ textAlign: "center", color: 'black' }}>DE-COM-TECH</h1>
 		<div className="container-video">
 			<div className="video-container">
 				<div className="video">

@@ -101,6 +101,7 @@ const  [show, setShow] = React.useState([]);
 
    const [search, setSearch] = React.useState("");
 const [joined,setJoined]=useState(true);
+const [trigger,setTrigger]=useState(true);
 const [subCom,setSubCom]=useState([]);
 const [joinedSubCom,setJoinedSubCom]=useState([]);
 const [id,setId]=useState(localStorage.getItem("MainId"));
@@ -145,7 +146,7 @@ console.log(id)
                  setJoinedSubCom(data)
           }
                 })
-        },[])  
+        },[trigger])  
  useEffect(()=>{
           axios.get(`http://localhost:8080/com/userSubCom?user=${userName}d&mainCom=${id}`,{
     
@@ -423,7 +424,8 @@ const mainFeaturedPost = {
                 'Authorization': 'Basic c2FqZWVudGhpcmFuOjEyMzQ1Ng=='
             }
         }).then((res)=>{console.log(res);
-        setId(localStorage.getItem("MainId"))});
+        setId(localStorage.getItem("MainId"))
+        setTrigger(false)});
         
         localStorage.setItem("joinedSubId",card.id);
                localStorage.setItem("joinedSubName",card.name)
@@ -454,7 +456,7 @@ const mainFeaturedPost = {
         })
       .catch(()=>{
       toast("You have already joined the community", { type: "success" });
-      alert("You have already joined the community");
+     
  
                 
                       

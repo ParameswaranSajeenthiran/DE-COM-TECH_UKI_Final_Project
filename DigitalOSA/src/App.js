@@ -23,7 +23,7 @@ import "./assets/vendor/venobox/venobox.css"
 import "./assets/vendor/aos/aos.css" 
 import GoogleChart from "./components/GoogleCharts";
 import SubCommunity from "./components/SubCommunity";
-
+import ReportsNew from "./components/ReportsNew";
 
 import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
@@ -35,6 +35,7 @@ import CreateMainCom from "./components/CreateMainCom";
 import CreatedMainCom from "./components/CreatedMainCom";
 
 import SubComList from "./components/SubComList";
+import Events from "./components/Events";
 import MainComList from "./components/MainComList";
 import MainComCreating from "./components/MainComCreating";
 import Dashboard from "./components/Dashboard";
@@ -50,7 +51,7 @@ import ActivitiesView from "./components/ActivitiesView";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import GooglePay from './components/GooglePay';
-import Video from './components/Video';
+import Video1 from './components/Video1';
 import HomePage from './components/Chat';
 import Calendar from './components/Calendar';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -323,15 +324,16 @@ changeSubCommunity=()=>{
               <Route exact path="/mainComCreating" component={MainComCreating} />
               <Route path="/mainCom" component={SubComList} />
               <Route path="/subCom" component={Dashboard} />  
-              <Route path="/reports" component={Doc} /> 
+              <Route path="/reports" component={ReportsNew} /> 
               <Route path="/doc" component={Doc} /> 
-                <Route path="/video" component={Video} /> 
+                <Route path="/video" component={Video1} /> 
                <Route path="/spreadSheet" component={SpreadSheet} /> 
 		 <Route path="/slide" component={Slide} /> 
-              <Route path="/activities" component={Activities} /> 
+              <Route path="/activities" component={Events} /> 
               <Route path="/activitiesView" component={ActivitiesView} /> 
                  <Route exact path="/joinedSubCom" component={JoinedDashboard} />
                    <Route exact path="/calendar" component={Calendar} />
+                    
                     <Route exact path="/googlePay" component={GooglePay} />
                      <Route exact path="/communityChat" component={HomePage} />
              </Switch>

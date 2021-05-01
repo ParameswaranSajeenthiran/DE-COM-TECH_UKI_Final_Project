@@ -203,31 +203,9 @@ handleRegister = (e) => {
             >
               Sign Up
             </Button>
-                        <FormControl fullWidth>
-                          <label htmlFor="username">Username</label>
-                          <TextField type="text" name="username" value={this.state.username}
-                            onChange={this.onChangeUsername}/>
-                        </FormControl>
+                     
                       </Grid>
-                      <Grid item xs={12}>
-                        <FormControl fullWidth>
-                          <label htmlFor="email">Email</label>
-                          <TextField type="text" name="email" value={this.state.email}
-                            onChange={this.onChangeEmail}/><br/><h5 style={style.pwd}>{this.state.emailValidation}</h5>
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={12}>
-                        <FormControl fullWidth>
-                          <label htmlFor="password">Password </label>
-                          <TextField type="password" name="password" value={this.state.password}
-                            onChange={this.onChangePassword}/><br/><h5 style={style.pwd}>{this.state.pwdValidation}</h5>
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={12}>
-                        <FormControl>
-                          <Button type="submit" color="primary">Sign Up</Button>
-                        </FormControl>
-                      </Grid>
+                  
                   </Grid>
                   )}
                   {

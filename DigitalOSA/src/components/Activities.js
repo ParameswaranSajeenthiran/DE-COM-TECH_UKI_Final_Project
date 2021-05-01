@@ -19,6 +19,7 @@ import post1 from './blog-post.1.md';
 import post2 from './blog-post.2.md';
 import post3 from './blog-post.3.md';
 import ActivityPost from './ActivityPosts';
+import DonationPost from './DonationPost';
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 //import { makeStyles } from '@material-ui/core/styles';
@@ -142,9 +143,11 @@ const [image,setImage]=React.useState([]);
 const [subCom,setSubCom]=useState(localStorage.getItem("subId"));
 const [mainCom,setMainCom]=useState(localStorage.getItem("MainId"));
 const [title,setTitle]=useState("");
+const [trigger,setTrigger]=useState(false);
 const [description,setDescription]=useState("");
 const [events,setEvents]=React.useState([]);
  const onFileChangeHandler = (e) => {
+
     e.preventDefault();
     var elements=[];
     console.log(e.target.files.length)
@@ -208,7 +211,7 @@ const submit=()=>{
         })
          .then(response=>{
                  console.log(response.data)
-                
+              
           
                 });
                  
@@ -242,7 +245,7 @@ setDescription(e.target.value)
       <CssBaseline />
       <Container maxWidth="lg">
         {/* <Header title="Blog" sections={sections} />   */}
-      {image.length?image.map((image)=>(<div class="gallery">
+      {image.length!=0?image.map((image)=>(<div class="gallery">
   <a target="_blank" href="img_5terre.jpg">
     <img src={image} alt="Cinque Terre" width="600" height="400"/>
   </a>
@@ -273,7 +276,8 @@ setDescription(e.target.value)
                         </ButtonGroup>
                   </Paper>):null}   </Grid>
             {events.length?(events.reverse().map((post) => (
-              <ActivityPost key={post.title} post={post} />
+            post.description=="donation"?( <DonationPost  key={post.title} post={post} />):(
+              <ActivityPost key={post.title} post={post} />)
             ))):<div><h1 style={{align:"center"}}>no activities yet </h1></div>}
           </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>

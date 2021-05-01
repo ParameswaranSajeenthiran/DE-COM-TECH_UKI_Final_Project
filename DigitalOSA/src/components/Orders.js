@@ -49,6 +49,7 @@ export default function Orders() {
 const [donations,setDonations]=React.useState([]);
   const [page, setPage] = React.useState(1);
   const [rowsPerPage, setRowsPerPage] = React.useState(3);
+    const [count, setCount] = React.useState(3);
 const [asc,setAsc]=React.useState("");
 const [subCom,setSubCom]=useState(localStorage.getItem("subId"));
 
@@ -73,6 +74,7 @@ const [subCom,setSubCom]=useState(localStorage.getItem("subId"));
                 .then(response=>{
                  console.log(response.data)
                  setDonations(response.data.data)
+                 setCount(response.data.Totalnoofpages)
           
                 })
         },[page,asc])
@@ -112,15 +114,8 @@ const [subCom,setSubCom]=useState(localStorage.getItem("subId"));
         </TableBody>
       
       </Table>
-        <Pagination count={10} page={page} color="primary" onChange={handleChange} />
-        <TablePagination
-      component="div"
-      count={100}
-      page={page}
-      onChangePage={handleChangePage}
-      rowsPerPage={rowsPerPage}
-      onChangeRowsPerPage={handleChangeRowsPerPage}
-    />
+        <Pagination count={4} page={page} color="primary" onChange={handleChange} />
+      
       <div className={classes.seeMore}>
         <Link color="primary" href="#" onClick={preventDefault}>
           

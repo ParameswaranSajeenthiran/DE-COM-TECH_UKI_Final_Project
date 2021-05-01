@@ -1,6 +1,6 @@
 import { Typography ,Grid} from "@material-ui/core";
 import React, { Component } from "react";
-import logo from"./tayu2.png";
+import logo from"./tayu3.png";
 
 
 class Hero extends Component{

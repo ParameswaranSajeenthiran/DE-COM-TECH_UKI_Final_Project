@@ -10,6 +10,12 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import DateAndTimePickers from './DatePicker';
+import ChatIcon from '@material-ui/icons/Chat';
+import BookIcon from '@material-ui/icons/Book';
+import VideoCallIcon from '@material-ui/icons/VideoCall';
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
+import HomeIcon from '@material-ui/icons/Home';
 export const mainListItems = (
   <div>
     <ListItem href="/mainCom" onClick={()=>{
@@ -30,7 +36,15 @@ export const mainListItems = (
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <HomeIcon />
+      </ListItemIcon>
+      <a href="/subCom">
+     <ListItemText primary="Dashboard" />
+     </a>
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <AddAPhotoIcon />
       </ListItemIcon>
       <a href="/activities">
      <ListItemText primary="Activities" />
@@ -39,33 +53,37 @@ export const mainListItems = (
 
     <ListItem button>
       <ListItemIcon>
-        <BarChartIcon />
+        <BookIcon/>
       </ListItemIcon>
       <a href="/reports">
       <ListItemText primary="Reports" /></a>
     </ListItem>
         <ListItem button>
       <ListItemIcon>
-        <PeopleIcon />
+        <ChatIcon />
       </ListItemIcon>
    <a href="/chat">
-     <ListItemText primary="chat" />
+     <ListItemText primary="Chat" />
      </a>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
+        
+      <VideoCallIcon/ >
+        </ListItemIcon>
       <a href="/video">
-     <ListItemText primary="video conferencing" />
+     <ListItemText primary="Video Conferencing" />
      </a>
     </ListItem>
+    
      <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
+<ListItemIcon>
+         <CalendarTodayIcon/>
       </ListItemIcon>
-      <a href="http://localhost:3001" >
-     <ListItemText primary="upcoming events" />
+      
+     
+      <a href="/calendar">
+     <ListItemText primary="Upcoming Events" />
      </a>
     </ListItem>
   </div>
