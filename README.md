@@ -2,7 +2,7 @@
 
 ## Uki Fullstack Web development Course Final project
 
-Web App deployed at https://decomtech-front.herokuapp.com/home
+Web App deployed at https://decomtech-front.herokuapp.com/home (currently not working since heroku became a paid service)
 
 Vidoe Explanation of the Full APP available at  https://youtu.be/LH8pSl3vVQg
 
